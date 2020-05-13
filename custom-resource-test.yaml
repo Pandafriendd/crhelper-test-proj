@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  SumResource:
+    Type: "Custom::Summer"
+    Properties:
+      ServiceToken: "arn:aws:lambda:us-east-1:457175632986:function:crhelper-sum-resource"
+      No1: 1
+      No2: 2
+Outputs:
+  Sum:
+    Value: !GetAtt SumResource.Sum
