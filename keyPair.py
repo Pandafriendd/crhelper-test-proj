@@ -95,7 +95,7 @@ def sendResponse(event, context, physicalid, responseStatus, responseData):
                     'LogicalResourceId': event['LogicalResourceId'],
                     'NoEcho': "true",
                     'Data': responseData}
-    print 'RESPONSE BODY:n' + json.dumps(responseBody)
+    print ('RESPONSE BODY:n' + json.dumps(responseBody))
     responseUrl = event['ResponseURL']
     json_responseBody = json.dumps(responseBody)
     headers = {
